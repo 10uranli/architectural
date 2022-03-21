@@ -1,0 +1,13 @@
+Hexagonal Arch
+Kolay bakım, yönetim, test ve scale.
+Domain - Port -Adapter 
+Port: Gateway gibi davranır.Inbound port  service interfacesi gibidir.Core logic'i expose eder.
+Outbound port ise repository interfacesi gibidir.App ile persistence iletişimi.
+
+Adaptor:Portların implementionını gibidir.Logic'i encapsulate eder dış sistemle iletişim için.
+	Primary Adaptor: Uygulamanın inbound portunu kullanarak uygulamayı calıstırır.Driving Adaptor olarak da bilinir
+	Rest controller buna ornektir.webviewda
+	Secondry Adaptor : Outbound portun implementationudur.Driven Adaptor olarak cagrılır.db, eXTERNAL SERVİCE buraya
+	örnektir.
+	
+Domain : core business
